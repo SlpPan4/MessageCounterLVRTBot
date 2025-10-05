@@ -30,8 +30,10 @@ def add_message(user_id: int, username: str, chat_id: int):
 def get_stats_today(chat_id: int):
     with sqlite3.connect(DB_NAME) as db:
         cursor = db.execute("""
-        SELECT username, count FROM messages
-        WHERE chat_id = ? AND date = date('now')
+        SELECT username, count 
+        FROM messages 
+        WHERE chat_id = ? 
+            AND date = date('now')
         ORDER BY count DESC
         """, (chat_id,))
         return cursor.fetchall()
@@ -39,19 +41,43 @@ def get_stats_today(chat_id: int):
 def get_stats_month(chat_id: int):
     with sqlite3.connect(DB_NAME) as db:
         cursor = db.execute("""
-        SELECT username, SUM(count) FROM messages
-        WHERE chat_id = ? AND date >= date('now','-30 days')
+        SELECT username, SUM(count) AS total FROM messages
+        WHERE chat_id = ? 
+            AND strftime('%Y-%m', date) = strftime('%Y-%m', 'now')
         GROUP BY username
-        ORDER BY count DESC
+        ORDER BY total DESC
+        """, (chat_id,))
+        return cursor.fetchall()
+
+def get_stats_prev_month(chat_id: int):
+    with sqlite3.connect(DB_NAME) as db:
+        cursor = db.execute("""
+        SELECT username, SUM(count) AS total FROM messages
+        WHERE chat_id = ? 
+            AND strftime('%Y-%m', date) = strftime('%Y-%m', 'now', 'start of month', '-1 month')
+        GROUP BY username
+        ORDER BY total DESC
         """, (chat_id,))
         return cursor.fetchall()
 
 def get_stats_week(chat_id: int):
     with sqlite3.connect(DB_NAME) as db:
         cursor = db.execute("""
-        SELECT username, SUM(count) FROM messages
-        WHERE chat_id = ? AND date >= date('now','-7 days')
+        SELECT username, SUM(count) AS total FROM messages
+        WHERE chat_id = ? 
+            AND strftime('%Y-%W', date) = strftime('%Y-%W', 'now')
         GROUP BY username
-        ORDER BY count DESC
+        ORDER BY total DESC
+        """, (chat_id,))
+        return cursor.fetchall()
+
+def get_stats_prev_week(chat_id: int):
+    with sqlite3.connect(DB_NAME) as db:
+        cursor = db.execute("""
+        SELECT username, SUM(count) AS total FROM messages
+        WHERE chat_id = ? 
+            AND strftime('%Y-%W', date) = strftime('%Y-%W', 'now', '-7 days')
+        GROUP BY username
+        ORDER BY total DESC
         """, (chat_id,))
         return cursor.fetchall()

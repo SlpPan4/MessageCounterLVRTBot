@@ -25,6 +25,17 @@ def stats_today(message):
     text = "\n".join(f"{user}: {count}" for user, count in stats)
     bot.reply_to(message, f"📊 Сообщения за сегодня/Messages today:\n{text}")
 
+# --- /stats_prev_month ---
+@bot.message_handler(commands=["stats_prev_month"])
+def stats_month(message):
+    stats1 = db.get_stats_prev_month(message.chat.id)
+    if not stats1:
+        bot.reply_to(message, "No messages were sent previous month\nНичего не было отправлено в прошлом месяце")
+        return
+    text = "\n".join(f"{user}: {count}" for user, count in stats1)
+    bot.reply_to(message, f"📊 Сообщения за прошлый месяц/Messages previous month:\n{text}")
+
+
 # --- /stats_month ---
 @bot.message_handler(commands=["stats_month"])
 def stats_month(message):
@@ -35,6 +46,16 @@ def stats_month(message):
     text = "\n".join(f"{user}: {count}" for user, count in stats1)
     bot.reply_to(message, f"📊 Сообщения за месяц/Messages this month:\n{text}")
 
+# --- /stats_prev_week ---
+@bot.message_handler(commands=["stats_prev_week"])
+def stats_week(message):
+    stats1 = db.get_stats_prev_week(message.chat.id)
+    if not stats1:
+        bot.reply_to(message, "No messages were sent previous week\nНичего не было отправлено на прошлой неделе")
+        return
+    text = "\n".join(f"{user}: {count}" for user, count in stats1)
+    bot.reply_to(message, f"📊 Сообщения за прошлую неделю/Messages previous week:\n{text}")
+
 # --- /stats_week ---
 @bot.message_handler(commands=["stats_week"])
 def stats_week(message):
@@ -43,7 +64,7 @@ def stats_week(message):
         bot.reply_to(message, "No messages were sent this week\nНичего не было отправлено на этой неделе")
         return
     text = "\n".join(f"{user}: {count}" for user, count in stats1)
-    bot.reply_to(message, f"📊 Сообщения за неделю/Messages this week:\n{text}")
+    bot.reply_to(message, f"📊 Сообщения за эту неделю/Messages this week:\n{text}")
 
 # --- /info ---
 @bot.message_handler(commands=["info"])
