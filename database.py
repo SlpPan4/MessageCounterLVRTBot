@@ -81,5 +81,3 @@ def get_stats_prev_week(chat_id: int):
         ORDER BY total DESC
         """, (chat_id,))
         return cursor.fetchall()
-
-# comment for git

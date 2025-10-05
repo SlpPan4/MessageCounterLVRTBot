@@ -19,8 +19,10 @@ Useful for group chats to track the most active members.
 
 - `/start` – creates a database where each chat’s data will be stored
 - `/stats_day` – shows messages sent by each user today
-- `/stats_week` – shows messages sent by each user over the last 7 days
-- `/stats_month` – shows messages sent by each user over the last 30 days
+- `/stats_week` – shows messages sent by each user over this week
+- `/stats_month` – shows messages sent by each user over this month
+- `/stats_prev_week` – shows messages sent by each user in previous week
+- `/stats_prev_month` – shows messages sent by each user in previous month
 - `/info` – shows the creator’s GitHub and info about the bot
 
 
@@ -42,8 +44,10 @@ If you notice any bugs, issues, or have suggestions, please open an issue in thi
 
 - `/start` – создаёт базу данных для хранения данных чатов
 - `/stats_day` – количество сообщений каждого пользователя за текущий день
-- `/stats_week` – количество сообщений каждого пользователя за последние 7 дней
-- `/stats_month` – количество сообщений каждого пользователя за последние 30 дней
+- `/stats_week` – количество сообщений каждого пользователя за текущую неделю
+- `/stats_month` – количество сообщений каждого пользователя за текущий календарный месяц
+- `/stats_prev_week` – количество сообщений каждого пользователя за предыдущую календарную неделю
+- `/stats_prev_month` – количество сообщений каждого пользователя за предыдущий календарный месяц
 - `/info` – GitHub создателя и краткая информация о боте
 
 
