@@ -106,7 +106,7 @@ def count_message(message):
         print("count_message exception:", e)
 
 
-# git is broken for some reason, adding this comment to try and commit one more time
+# git is broken for some reason, adding this comment to try and commit one more time xdxdxd
 
 print("Bot is running...")
 bot.infinity_polling()
