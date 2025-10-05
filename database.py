@@ -54,7 +54,7 @@ def get_stats_prev_month(chat_id: int):
         cursor = db.execute("""
         SELECT username, SUM(count) AS total FROM messages
         WHERE chat_id = ? 
-            AND strftime('%Y-%m', date) = strftime('%Y-%m', 'now', 'start of month', '-1 month')
+            AND strftime('%Y-%m', date) = strftime('%Y-%m', 'now', 'start of month', '-1 month') # to see the results for prev calendar month, not just for last 30 days
         GROUP BY username
         ORDER BY total DESC
         """, (chat_id,))
@@ -65,7 +65,7 @@ def get_stats_week(chat_id: int):
         cursor = db.execute("""
         SELECT username, SUM(count) AS total FROM messages
         WHERE chat_id = ? 
-            AND strftime('%Y-%W', date) = strftime('%Y-%W', 'now')
+            AND strftime('%Y-%W', date) = strftime('%Y-%W', 'now') # the same thing but for this week
         GROUP BY username
         ORDER BY total DESC
         """, (chat_id,))
