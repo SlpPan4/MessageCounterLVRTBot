@@ -40,7 +40,7 @@ def get_stats_today(chat_id: int):
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute("""
-            SELECT username, count
+            SELECT username, SUM(count) AS total
             FROM messages
             WHERE chat_id = %s AND date = %s
             ORDER BY total DESC
