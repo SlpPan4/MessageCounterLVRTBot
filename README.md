@@ -1,55 +1,71 @@
-# MessageCounterLVRTBot
+# 🌟 MessageCounterLVRTBot
 
-**MESSAGE COUNTER BOT FOR TELEGRAM CHATS**  
+**📊 MESSAGE COUNTER BOT FOR TELEGRAM CHATS**  
 *(ENG below / RU ниже)*
 
 ---
 
-## English
+## English 🇬🇧
 
-A Telegram bot that counts the amount of messages sent in a certain period of time and provides statistics.  
-Useful for group chats to track the most active members.
+A **Telegram bot** that counts the number of messages sent in a certain period of time and provides clear statistics.  
+Perfect for **group chats** to see who’s the most active! 🚀
 
-> **Note:**  
-> This bot was custom-made for a friend for a certain price.  
-> Copying or using it for commercial purposes without my permission is **not allowed**.  
-> This is my **first ever experience** in creating bots.
+✨ This project is my **first ever bot**, so I’ve put extra love and effort into it.  
+If you like it — please consider giving the repo a **⭐ star**. It really motivates me to keep improving!  
 
-### Available Commands
+---
 
-- `/start` – creates a database where each chat’s data will be stored
-- `/stats_day` – shows messages sent by each user today
-- `/stats_week` – shows messages sent by each user over this week
-- `/stats_month` – shows messages sent by each user over this month
-- `/stats_prev_week` – shows messages sent by each user in previous week
-- `/stats_prev_month` – shows messages sent by each user in previous month
-- `/info` – shows the creator’s GitHub and info about the bot
+### ⚙️ Available Commands
 
+- `/start` – creates a database where each chat’s data will be stored  
+- `/stats_day` – shows messages sent by each user today 📅  
+- `/stats_week` – shows messages sent by each user this week 📈  
+- `/stats_month` – shows messages sent by each user this month 📆  
+- `/stats_prev_week` – shows messages from the **previous week** ⏮️  
+- `/stats_prev_month` – shows messages from the **previous month** 🗓️  
+- `/info` – shows the creator’s GitHub and bot info 💡  
 
-If you notice any bugs, issues, or have suggestions, please open an issue in this repository.
+---
+
+### 🔔 Notes
+
+- This bot was **custom-made for a friend** at a certain price.  
+- Copying or using it for **commercial purposes without permission is forbidden** 🚫  
+- If you find bugs 🐛, issues, or have suggestions 💡 — please open an issue in this repo!  
 
 ---
 
 ## Русский
 
-Бот для Telegram, который считает количество сообщений за определённый промежуток времени  
-и предоставляет статистику. Полезно для групп с множеством участников, чтобы отслеживать самых активных.
+**Бот для Telegram**, который считает количество сообщений за выбранный промежуток времени  
+и показывает красивую статистику. Отлично подходит для **групповых чатов**, чтобы знать, кто самый активный 🙌  
 
-> **Примечание:**  
-> Бот был создан на заказ для моего друга за определённую цену.  
-> Копирование и использование в коммерческих целях без моего согласия **запрещено**.  
-> Это мой **первый опыт** создания ботов.
+✨ Это мой **первый проект**, поэтому я вложил в него много старания.  
+Если бот вам нравится — поставьте, пожалуйста, **⭐ звёздочку** репозиторию. Это будет лучшей поддержкой! ❤️  
 
-### Доступные команды
+---
 
-- `/start` – создаёт базу данных для хранения данных чатов
-- `/stats_day` – количество сообщений каждого пользователя за текущий день
-- `/stats_week` – количество сообщений каждого пользователя за текущую неделю
-- `/stats_month` – количество сообщений каждого пользователя за текущий календарный месяц
-- `/stats_prev_week` – количество сообщений каждого пользователя за предыдущую календарную неделю
-- `/stats_prev_month` – количество сообщений каждого пользователя за предыдущий календарный месяц
-- `/info` – GitHub создателя и краткая информация о боте
+### ⚙️ Доступные команды
 
+- `/start` – создаёт базу данных для хранения данных чатов  
+- `/stats_day` – количество сообщений за сегодняшний день 📅  
+- `/stats_week` – количество сообщений за текущую неделю 📈  
+- `/stats_month` – количество сообщений за текущий календарный месяц 📆  
+- `/stats_prev_week` – статистика за **прошлую неделю** ⏮️  
+- `/stats_prev_month` – статистика за **прошлый месяц** 🗓️  
+- `/info` – информация о боте и GitHub автора 💡  
 
-Если вы заметите баги, проблемы в работе бота или хотите дать совет,  
-пожалуйста, сообщите об этом в этом репозитории.
+---
+
+### 🔔 Примечания
+
+- Бот был **создан на заказ** для друга за определённую цену.  
+- Копирование и использование в **коммерческих целях без согласия запрещено** 🚫  
+- Если заметите баги 🐞, ошибки ⚠️ или захотите поделиться идеями 💡 — напишите в issues!  
+
+---
+
+## ⭐ Support
+
+If you find this project useful or fun — don’t forget to **leave a star** ⭐ on GitHub.  
+That small gesture really helps me as a beginner developer! 🙏
