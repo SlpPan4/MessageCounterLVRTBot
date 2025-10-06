@@ -43,6 +43,7 @@ def get_stats_today(chat_id: int):
             SELECT username, SUM(count) AS total
             FROM messages
             WHERE chat_id = %s AND date = %s
+            GROUP BY username
             ORDER BY total DESC
             """, (chat_id, today))
             return cur.fetchall()
